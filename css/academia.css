@@ -1,0 +1,229 @@
+/* resetando  */
+@import url('https://fonts.googleapis.com/css2? family= Mulish:ital,wght@1.300 & display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mulish';
+    box-sizing: border-box;
+}
+
+/* fundo da tela */
+
+body{
+    /* width: 100vh; */
+    height: 100vh;
+    font-size: 3%;
+    color: white;
+    
+}
+
+/* colocando a imagem */
+
+ body{ /* aqui estamos usando sombre junto com a imagem*/
+    background: linear-gradient(rgba(17,17,17,0.8), rgba(20,20,20,1)) , url('../img/fotoPerfil.jpg'); 
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+}
+
+/* menu =heder navabar */
+
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    /* height: 7vh; */
+    background: rgba(22,22,22,0.2);
+}
+
+
+/* mexendo no menu */
+
+.menu-content{
+    text-transform: uppercase;
+    /* height: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-top: 20px;
+
+
+}
+
+
+.logo{
+    font-size: 1.2rem;
+    letter-spacing: 0.4rem;
+    margin-left: 10px;
+    cursor: pointer;
+    color: aqua;
+
+}
+
+.header-menu .list-itens{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-content .list-itens a{
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform:  2ms ease-in;
+
+    position: relative;
+}
+
+.menu-content .list-itens a::before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color:rgb(251,255,0) ;
+    transition: all 1.5s ease;
+}
+
+
+.menu-content .list-itens a:hover:before{
+    width: 60px;
+
+}
+
+.menu-content .list-itens a:hover{
+    color: aqua;
+}
+
+/* parte do main */
+
+
+
+main{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* titulo */
+
+.titulo_pricipal{
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: aqua;
+    transform: translateX(0);
+    transition:  transform .8s;
+    cursor: pointer;
+    
+}
+.titulo_pricipal:hover{
+    transform: translateX(-50px);
+}
+/* paragrafo */
+
+.subtitulo{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+     word-spacing: 15px;
+}
+
+/* botoes */
+.btns{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.btns .btn1{
+   padding: 8px;
+   color: rebeccapurple;
+   text-transform: capitalize;
+   border-radius: 8px;
+   border: none;
+   margin-left: 10px;
+   transition: all .4s;
+}
+
+
+.btns .btn2{
+    padding: 8px;
+    color: rebeccapurple;
+    text-transform: capitalize;
+    border-radius: 8px;
+    border: none;
+    margin-left: 10px;
+    transition: all .4s;
+ }
+
+ #face{
+     background: blue;
+     padding: 8px;
+     border-radius: 8px;
+ }
+
+ #insta{
+    background: rgb(247, 67, 208);
+    padding: 8px;
+    border-radius: 2px;
+}
+
+
+
+.btns .btn2:hover{
+    background: orange;
+    color:black;
+}
+
+.btns .btn1:hover{
+    background: orange;
+    color:black;
+}
+
+.rodape{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.rodape p{
+    font-size: 20px;
+    text-align: center;
+    margin: 8px;
+
+    color: aquamarine;
+    word-spacing: 2px;
+    animation: balanco;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: all 6s;
+}
+
+@keyframes balanco{
+    0%{
+        transform: translateX(0);
+        color: aqua;
+    }
+    25%{
+        transform: translateX(-50px);
+        color: aquamarine;
+    }50%{
+        transform: translateX(50px);
+    }
+}
